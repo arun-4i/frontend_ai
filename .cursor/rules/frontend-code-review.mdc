@@ -1,0 +1,29 @@
+---
+description: Comprehensive checklist and best practices for reviewing frontend code (Next.js, React, TypeScript, etc.). Ensures code quality, maintainability, and adherence to project standards. Agent-requestable.
+globs: 
+alwaysApply: false
+---
+# Frontend Code Review Guidelines
+
+## Review Process
+- All code must be reviewed by at least one other team member (or AI) before merging.
+- Use pull requests for all changes.
+- Reviewer must check off the Bug-Prevention & Quality Checklist from .cursorrules.
+
+## What to Check For
+- Code clarity, readability, and maintainability
+- Correctness and adherence to requirements
+- Consistent use of TypeScript types
+- Proper use of React/Next.js patterns
+- State management best practices (Zustand, TanStack Query, etc.)
+- UI consistency and accessibility (a11y)
+- Security (XSS, CSRF, etc.)
+- Performance (avoid unnecessary re-renders, optimize bundle size)
+- Test coverage and meaningful test cases
+- No linting or formatting errors
+
+## Best Practices
+- Leave constructive, actionable feedback
+- Ask clarifying questions if requirements are unclear
+- Suggest improvements, but respect author's intent
+- Approve only when all checklist items and comments are resolved
