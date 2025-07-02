@@ -10,6 +10,8 @@ ShadCN UI, Tailwind CSS, Zustand, TanStack Query v5, nuqs, React Hook Form + Zod
 
 ###Folder Structure & Naming Conventions
 Folder Structure: A scalable, feature-first structure aligned with Next.js 15 App Router conventions.
+- All new custom components (such as Navbar) must be placed in 'src/components/'.
+- The 'ui' directory is reserved only for shadcn components.
 ```
 src/
   ├── api/ 
@@ -64,6 +66,8 @@ src/
 - No deprecated APIs; keep dependencies minimal and updated
 - Write tests for logic and critical UI
 - Document complex logic as needed
+- All React components that use client-side hooks (e.g., useState, useEffect, useTheme) must include the 'use client' directive at the top of the file. This is required for Next.js client components.
+- Any file that uses client-side hooks (such as useSidebar, useState, useEffect, useTheme, etc.) must include the 'use client' directive at the top. This is required for Next.js client components and layouts.
 
 ## Component & Hook Guidelines
 - Prefer Server Components for data/static content; use "use client" only for interactivity

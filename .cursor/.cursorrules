@@ -11,8 +11,8 @@
 # WORKFLOW (Frontend)
 
 1. **Requirements Clarification:** AI must always start by creating a requirements clarification section (using the template below) and get user confirmation or answers.
-2. **Planning:** After clarification, AI must generate a detailed, tickable plan file in `.cursor/tasks/YYYY-MM-DD/` (today's date) before any implementation begins.
-3. **Approval:** User must review and approve the plan file (add "Plan Approved By:" in the plan) before any code or implementation work starts.
+2. **Planning:** After clarification, AI must generate a detailed, tickable plan file in `.cursor/tasks/YYYY-MM-DD/` (today's date, in YYYY-MM-DD format) before any implementation begins. **This applies to all major changes, including process/rules changes.**
+3. **Approval:** User must review and approve the plan file (add "Plan Approved By:" in the plan) before any code or implementation work starts. **The plan file is the single source of truth for the change until merged.**
 4. **Implementation:** Only after approval, complete tasks, using the Bug-Prevention Checklist in each plan.
 5. **Code Review & Testing:** All code must be reviewed and pass tests before completion. See code review and testing rules.
 6. **Linting & Formatting:** All code must pass linting/formatting before merge. See linting rules.
@@ -66,3 +66,28 @@
 - What action(s) will be taken to address feedback?
 - What should the AI do differently next time?
 - Any other notes?
+
+# ---
+
+# DOCUMENTATION & README GENERATION
+
+- README or documentation changes should only be included in the plan and implementation if explicitly requested in requirements or referenced standards.
+
+# ---
+
+# COMPONENT PLACEMENT & RULES CHANGES (2025-07-01)
+
+- All new custom components (e.g., Navbar) must be placed in 'src/components/'.
+- The 'ui' directory is reserved only for shadcn components.
+- Any rule/process change must:
+  1. Be documented in a plan file in `.cursor/tasks/YYYY-MM-DD/`.
+  2. Be reflected in the relevant rules file (e.g., frontend-dev.mdc).
+  3. Be referenced in this file's workflow and rules index.
+
+# ---
+
+# CLIENT COMPONENT DIRECTIVE (2025-07-01)
+
+- All React components that use client-side hooks (e.g., useState, useEffect, useTheme) must include the 'use client' directive at the top of the file.
+- This applies to all new and existing components.
+- Any file that uses client-side hooks (such as useSidebar, useState, useEffect, useTheme, etc.) must include the 'use client' directive at the top. This applies to all new and existing components/layouts.
